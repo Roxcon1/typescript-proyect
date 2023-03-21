@@ -15,12 +15,12 @@
     function getTotal() {
       let total = 0;
       for (let i = 0; i < products.length - 1; i++) {
-        total += products[i].prize;
+        total += products[i];
       }
       return total;
     }
     async function addProduct(index) {
-      if (getTotal.length <= limit) {
+      if (getTotal() <= limit) {
         myCart.push(products[index]);
       }
     }
